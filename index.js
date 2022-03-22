@@ -19,7 +19,7 @@ const dataSources = () => ({
 
 const PORT = 4000;
 
-(async ()=>{
+(async () => {
     const app = express();
     const server = createServer(app);
     const corsOptions = {
@@ -59,15 +59,14 @@ const PORT = 4000;
     
     
     
-    
-    
-    let currentNumber = 0;
-    function incrementNumber() {
-      currentNumber++;
-      pubsub.publish("NOT", { id: currentNumber });
-      console.log({ currentNumber })
-      setTimeout(incrementNumber, 1000);
-    }
-    // Start incrementing
-    incrementNumber();
+
+    // let currentNumber = 0;
+    // function incrementNumber() {
+    //   currentNumber++;
+    //   pubsub.publish("NOT", { id: currentNumber });
+    //   console.log({ currentNumber })
+    //   setTimeout(incrementNumber, 5000);
+    // }
+    // // Start incrementing
+    // incrementNumber();
 })()

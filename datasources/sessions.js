@@ -15,7 +15,7 @@ class SessionApi extends DataSource {
     getSessionById(id) {
         return sessions.filter(session => session.id === parseInt(id))[0];
     }
-    toggleFavoriteSession(id, favorite) {
+    toggleFavoriteSession(id) {
         const session = sessions.filter(session => session.id === parseInt(id))[0];
         session.favorite = !session.favorite;
         return session;

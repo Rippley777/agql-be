@@ -1,9 +1,4 @@
-// const sessions = require('../data/sessions.json');
-// const { DataSource } = require('apollo-datasource');
-// const _ = require('lodash');
-
 const {RESTDataSource}  = require('apollo-datasource-rest');
-
 
 class SpeakerApi extends RESTDataSource {
     constructor() {
